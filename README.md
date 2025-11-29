@@ -38,12 +38,6 @@ To solve this:
 
 ---
 
-## 🌐 **Live Demo**
-
-👉 *(Add your deployed URL here)*
-
----
-
 ## 🛠️ **Technologies Used**
 
 ### **Frontend**
@@ -205,7 +199,9 @@ VITE_NEWS_API_KEY=your_key
 ## 📜 **MIT License**
 
 Distributed under the MIT License.
+
 Copyright (c) 2024
+
 **NewsMania by Vikash Kumar Gupta**
 
 ---
