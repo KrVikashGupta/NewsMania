@@ -1,131 +1,227 @@
 
-<p align="center">
-  <img src="https://dummyimage.com/1400x300/0f172a/ffffff&text=NewsMania+%7C+Business+News+Aggregator" />
-</p>
+# 📰 **NewsMania**
+
+**NewsMania** is a modern, full-stack news aggregator that delivers real-time **Business News Headlines** from trusted sources using the **NewsAPI**.
+The project uses a combination of **backend middleware (Express.js)** and **direct frontend API calls**.
+It also integrates:
+
+* 🔐 **Google Authentication (Firebase)**
+* 🧑‍💻 **GitHub API** to fetch user/admin details
+* 📩 **Web3Forms** for sending emails to the admin
+* ⚙️ **Custom Express middleware** to bypass CORS limitations of NewsAPI in production
+
+---
+
+## ✨ **Features**
+
+### 🔥 Core Features
+
+* 📰 Fetches **Business News Headlines** from platforms like Times of India and others
+* 🔐 **Google Login/Logout** using Firebase Authentication
+* 🧑‍💻 Fetches GitHub profile details using **GitHub API**
+* 📩 Sends emails using **Web3Forms integration**
+* 🚀 Uses Express middleware to bypass **CORS restrictions** of NewsAPI
+* ⚡ Responsive UI built with React + Vite + Tailwind
+* 🎬 Smooth animations using **GSAP**
+
+---
+
+## 🔧 **Middleware Explanation**
+
+NEWSAPI restricts API calls on production due to **CORS blocking**.
+To solve this:
+
+* An **Express.js middleware** is created
+* The backend fetches NewsAPI data
+* The frontend consumes the backend instead of calling NewsAPI directly
+* This ensures smooth API calls in production (Vercel + Railway)
+
+---
+
+## 🌐 **Live Demo**
+
+👉 *(Add your deployed URL here)*
+
+---
+
+## 🛠️ **Technologies Used**
+
+### **Frontend**
+
+* React + Vite
+* Tailwind CSS
+* React Router DOM
+* Axios
+* GSAP
+
+### **Backend**
+
+* Express.js (CORS middleware/proxy)
+* Firebase Authentication
+* Railway (Backend hosting)
+
+### **APIs**
+
+* **NEWSAPI** – Fetch news
+* **GitHub API** – Fetch profile/admin data
+* **Google Auth** – Login/Logout
+* **Web3Forms** – Trigger admin email
+
+### **Deployment**
+
+* **Frontend** → Vercel
+* **Backend** → Railway.app
+
+---
+
+## 🚀 **Getting Started**
+
+Follow the steps to run the project locally.
+
+---
+
+## ✅ **Prerequisites**
+
+* Node.js installed
+* NewsAPI key
+* GitHub API key
+* Firebase project (Google Authentication enabled)
+* Web3Forms account
+* TailwindCSS + React + Vite environment
+
+---
+
+## 📦 **Installation**
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/KrVikashGupta/NewsMania.git
+```
+
+### 2️⃣ Navigate to frontend folder
+
+```bash
+cd NewsMania
+npm install
+```
+
+### 3️⃣ Navigate to backend folder
+
+```bash
+cd server
+npm install
 ```
 
 ---
 
-# 🧩 **2️⃣ CUSTOM PROJECT LOGO**
+## 🔐 **Setup Environment Variables**
 
-Use this in top-right or above title:
+### In **/server/.env**
 
-```markdown
-<p align="center">
-  <img src="https://dummyimage.com/200x200/1e3a8a/ffffff&text=NewsMania" width="200" />
-</p>
+```
+NEWS_API_KEY=your_newsapi_key
+PORT=your_port_number
+```
+
+### In **frontend**
+
+Add Firebase config in:
+
+```
+/src/components/Header/FireBaseConfig.js
 ```
 
 ---
 
-# 🏷️ **3️⃣ TECH STACK BADGES (Modern & Clean)**
+## ▶️ **Run Backend Server**
 
-Add under the banner:
+```bash
+cd server
+node server.js
+```
 
-```markdown
-<p align="center">
-  <img src="https://img.shields.io/badge/React-18-blue?logo=react" />
-  <img src="https://img.shields.io/badge/Vite-Fast%20Build-purple?logo=vite" />
-  <img src="https://img.shields.io/badge/Tailwind-CSS-38bdf8?logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Express.js-Backend-black?logo=express" />
-  <img src="https://img.shields.io/badge/Firebase-GoogleAuth-orange?logo=firebase" />
-  <img src="https://img.shields.io/badge/NewsAPI-Business%20News-red" />
-  <img src="https://img.shields.io/badge/Web3Forms-Email%20Service-blue" />
-  <img src="https://img.shields.io/badge/License-MIT-green" />
-</p>
+## ▶️ **Run Frontend App**
+
+```bash
+cd NewsMania
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+Backend runs at:
+
+```
+http://localhost:PORT
 ```
 
 ---
 
-# ✨ **4️⃣ SECTION DIVIDERS (Use anywhere)**
+## ☁️ **Deployment Guide**
 
-### 🔹 Elegant Divider
+### **Backend → Railway.app**
 
-```markdown
----
+1. Create a new project
+2. Add **environment variables** from `.env`
+3. Deploy directly from GitHub
+
+### **Frontend → Vercel**
+
+1. Import your GitHub repo
+2. Add:
 
 ```
-
-### 🔹 Stylish Divider
-
-```markdown
-<p align="center">• • •</p>
+VITE_NEWS_API_KEY=your_key
 ```
 
-### 🔹 Premium Divider
-
-```markdown
-<p align="center"><img src="https://dummyimage.com/600x40/ede9fe/4c1d95&text=•••" /></p>
-```
-
----
-
-# 📸 **5️⃣ DUMMY SCREENSHOTS (You will replace later)**
-
-### Home Page
-
-```markdown
-<p align="center">
-  <img src="https://dummyimage.com/900x450/ddd/000&text=Home+Page+Preview" />
-</p>
-```
-
-### News Cards
-
-```markdown
-<p align="center">
-  <img src="https://dummyimage.com/900x450/ccc/000&text=News+Article+Cards" />
-</p>
-```
-
-### Google Login Screen
-
-```markdown
-<p align="center">
-  <img src="https://dummyimage.com/900x450/e2e8f0/000&text=Google+Auth+Screen" />
-</p>
-```
+3. Deploy
 
 ---
 
-# 🧱 **6️⃣ BADGE BLOCK FOR FEATURES**
+## 📌 **Usage**
 
-```markdown
-<p align="center">
-  <img src="https://img.shields.io/badge/RealTime-News-blue" />
-  <img src="https://img.shields.io/badge/Business-Headlines-important" />
-  <img src="https://img.shields.io/badge/Google-Login-green" />
-  <img src="https://img.shields.io/badge/CORS-Proxy%20Server-critical" />
-  <img src="https://img.shields.io/badge/Responsive-Design-brightgreen" />
-</p>
-```
+* Open the app in your browser
+* Login using **Google Authentication**
+* View latest business news
+* Fetch GitHub user details
+* Send message to admin via Web3Forms
 
 ---
 
-# 🎁 **7️⃣ COPY-PASTE HEADER (Full Premium Intro Section)**
+## 🤝 **Contributing**
 
-Use this exact block at the top of your README for a world-class intro:
+1. Fork the repo
+2. Create a new branch
+3. Commit your feature
+4. Push and open a Pull Request
 
-```markdown
-<p align="center">
-  <img src="https://dummyimage.com/1400x300/0f172a/ffffff&text=NewsMania+%7C+Business+News+Aggregator" />
-</p>
+---
 
-<p align="center">
-  <img src="https://dummyimage.com/200x200/1e3a8a/ffffff&text=NewsMania" width="180" />
-</p>
+## 📜 **MIT License**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-18-blue?logo=react" />
-  <img src="https://img.shields.io/badge/Vite-Fast%20Build-purple?logo=vite" />
-  <img src="https://img.shields.io/badge/Tailwind-CSS-38bdf8?logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/Express.js-Backend-black?logo=express" />
-  <img src="https://img.shields.io/badge/Firebase-GoogleAuth-orange?logo=firebase" />
-  <img src="https://img.shields.io/badge/NewsAPI-Business%20News-red" />
-  <img src="https://img.shields.io/badge/Web3Forms-Email%20Service-blue" />
-</p>
+Distributed under the MIT License.
+Copyright (c) 2024
+**NewsMania by Vikash Kumar Gupta**
 
-<p align="center">
-  <b>A modern business-news aggregator using NewsAPI, Express.js middleware, Google Authentication, and Web3Forms.</b>
-</p>
+---
 
+## 📞 **Contact**
+
+👤 **Author:** *Vikash Kumar Gupta*
+📧 Email: **[vikashkumargupta907@gmail.com](mailto:vikashkumargupta907@gmail.com)**
+🔗 GitHub: [https://github.com/KrVikashGupta](https://github.com/KrVikashGupta)
+🔗 LinkedIn: [https://linkedin.com/in/vikash1995](https://linkedin.com/in/vikash1995)
+🔗 Project Link: [https://github.com/KrVikashGupta/NewsMania](https://github.com/KrVikashGupta/NewsMania)
+
+---
+
+### 🙏 Thank you for checking out **NewsMania!**
+
+Stay updated. Stay informed.
+
+---
