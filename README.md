@@ -195,27 +195,6 @@ VITE_NEWS_API_KEY=your_key
 4. Push and open a Pull Request
 
 ---
-
-## 📜 **MIT License**
-
-Distributed under the MIT License.
-
-Copyright (c) 2024
-
-**NewsMania by Vikash Kumar Gupta**
-
----
-
-## 📞 **Contact**
-
-👤 **Author:** *Vikash Kumar Gupta*
-📧 Email: **[vikashkumargupta907@gmail.com](mailto:vikashkumargupta907@gmail.com)**
-🔗 GitHub: [https://github.com/KrVikashGupta](https://github.com/KrVikashGupta)
-🔗 LinkedIn: [https://linkedin.com/in/vikash1995](https://linkedin.com/in/vikash1995)
-🔗 Project Link: [https://github.com/KrVikashGupta/NewsMania](https://github.com/KrVikashGupta/NewsMania)
-
----
-
 ### 🙏 Thank you for checking out **NewsMania!**
 
 Stay updated. Stay informed.
